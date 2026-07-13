@@ -1,4 +1,4 @@
 interface:
-  display_name: "本地高清图片修复技能"
+  display_name: "本地化图片高清修复技能"
   short_description: "基于本地 UpScayl 的 2K/4K 高清放大与图片修复"
   default_prompt: "Use $local-image-upscale to upscale this image locally while preserving content; use GPT Image 2 only for requested edits or reference-based generation."

@@ -1,4 +1,4 @@
-# 本地高清图片修复技能
+# 本地化图片高清修复技能
 
 `local-image-upscale` 是一个面向 Codex / xiaow 的本地图片高清放大与修复 skill。
 
