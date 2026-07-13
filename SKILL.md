@@ -11,14 +11,15 @@ Use a dedicated super-resolution backend for the base enlargement. On macOS, pre
 
 1. Inspect the input format, pixel dimensions, color mode, and whether it contains a face, product, illustration, or dense text.
 2. Inspect available local backends with `scripts/check_backends.py` before choosing a command. The detector checks both PATH commands and the standard macOS UpScayl app bundle.
-3. Select the least destructive backend:
+3. For a local upscale, run `scripts/upscale.py INPUT OUTPUT --mode MODE --scale 2 --json`. Use its JSON result as the machine-readable execution record.
+4. Select the least destructive backend:
    - `Real-ESRGAN` general/photo model for photographs, landscapes, and products.
    - `Real-ESRGAN` anime model for anime and illustrations.
    - `SwinIR` or high-quality classical resize for screenshots, documents, logos, and dense text.
    - Add `GFPGAN` or `CodeFormer` only for portraits that need face restoration; keep face restoration conservative.
-4. Prefer 2x first. Apply a second stage only when the result still needs to reach 2K or 4K and the source has enough information.
-5. Validate output dimensions, file readability, visual artifacts, faces, edges, logos, and text. Report when details were reconstructed rather than recovered.
-6. Use GPT Image 2 only as an optional second pass for requested local repairs, masking, background cleanup, object retouching, reference-image generation, or style fusion.
+5. Prefer 2x first. Apply a second stage only when the result still needs to reach 2K or 4K and the source has enough information.
+6. Validate output dimensions, file readability, visual artifacts, faces, edges, logos, and text. Report when details were reconstructed rather than recovered.
+7. Use GPT Image 2 only as an optional second pass for requested local repairs, masking, background cleanup, object retouching, reference-image generation, or style fusion.
 
 ## Backend Rules
 

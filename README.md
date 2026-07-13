@@ -34,6 +34,18 @@ git clone https://github.com/skylincn/local-image-upscale-skill.git \
 python3 ~/.codex/skills/local-image-upscale/scripts/check_backends.py
 ```
 
+## Local CLI
+
+The bundled wrapper selects a conservative UpScayl model and emits a JSON execution record:
+
+```bash
+python3 ~/.codex/skills/local-image-upscale/scripts/upscale.py \
+  input.jpg output.png \
+  --mode portrait --scale 2 --json
+```
+
+Supported modes are `photo`, `portrait`, `product`, `general`, `sharp`, `anime`, `illustration`, and `text`. The wrapper never uploads the image and never overwrites the input.
+
 ## 使用
 
 在 Codex 或 xiaow 中调用：
@@ -81,7 +93,9 @@ local-image-upscale-skill/
 ├── LICENSE
 ├── agents/openai.yaml
 ├── references/backend-notes.md
-└── scripts/check_backends.py
+└── scripts/
+    ├── check_backends.py
+    └── upscale.py
 ```
 
 ## License
