@@ -1,6 +1,6 @@
 # Backend Notes
 
-The skill is local-first and does not assume Dreamina/Jimeng access.
+The skill is local-first and uses the locally available backend configuration.
 
 Preferred options:
 

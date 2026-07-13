@@ -1,6 +1,6 @@
 ---
 name: local-image-upscale
-description: Local-first image upscaling and restoration for 2K/4K output. Use when users ask to enlarge, sharpen, denoise, restore, or refine images without relying on Dreamina/Jimeng API; supports photos, portraits, products, anime, and text-heavy images with conservative model selection and explicit quality limits.
+description: Local-first image upscaling and restoration for 2K/4K output. Use when users ask to enlarge, sharpen, denoise, restore, or refine images; supports photos, portraits, products, anime, and text-heavy images with conservative model selection and explicit quality limits.
 ---
 
 # 本地化图片超分修复

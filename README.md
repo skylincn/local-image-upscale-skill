@@ -2,7 +2,7 @@
 
 `local-image-upscale` 是一个面向 Codex / xiaow 的本地图片高清放大与修复 skill。
 
-它优先调用 macOS UpScayl 应用内置的 Real-ESRGAN CLI，不依赖即梦 API。基础放大与生成式改图分开处理：UpScayl 负责稳定的 2K/4K 高清放大，GPT Image 2 可选用于局部修复、mask 改图、参考图生图和风格融合。
+它优先调用 macOS UpScayl 应用内置的 Real-ESRGAN CLI。基础放大与生成式改图分开处理：UpScayl 负责稳定的 2K/4K 高清放大，GPT Image 2 可选用于局部修复、mask 改图、参考图生图和风格融合。
 
 文档使用上游模型名称，不使用内部渠道名称。当前公开版本统一使用 GPT Image 2。
 
