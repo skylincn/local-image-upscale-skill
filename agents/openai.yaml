@@ -1,4 +1,4 @@
 interface:
-  display_name: "Local Image Upscale"
-  short_description: "Local-first 2K/4K image upscaling and restoration workflow"
+  display_name: "本地高清图片修复技能"
+  short_description: "基于本地 UpScayl 的 2K/4K 高清放大与图片修复"
   default_prompt: "Use $local-image-upscale to upscale this image locally while preserving content and selecting the safest model for its type."
