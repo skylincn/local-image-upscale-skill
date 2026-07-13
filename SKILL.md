@@ -3,7 +3,7 @@ name: local-image-upscale
 description: Local-first image upscaling and restoration for 2K/4K output. Use when users ask to enlarge, sharpen, denoise, restore, or refine images without relying on Dreamina/Jimeng API; supports photos, portraits, products, anime, and text-heavy images with conservative model selection and explicit quality limits.
 ---
 
-# 本地化图片高清修复技能
+# 本地化图片超分修复
 
 Use a dedicated super-resolution backend for the base enlargement. On macOS, prefer the bundled UpScayl binary inside `/Applications/Upscayl.app`; do not require the GUI to be opened. Do not use GPT Image 2 as the default upscaler: generative editing may redraw faces, products, logos, or text.
 
