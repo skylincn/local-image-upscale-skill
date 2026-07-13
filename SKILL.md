@@ -5,7 +5,7 @@ description: Local-first image upscaling and restoration for 2K/4K output. Use w
 
 # 本地高清图片修复技能
 
-Use a dedicated super-resolution backend for the base enlargement. On macOS, prefer the bundled UpScayl binary inside `/Applications/Upscayl.app`; do not require the GUI to be opened. Do not use a generative image model as the default upscaler: Xiaobai and Agnes may redraw faces, products, logos, or text.
+Use a dedicated super-resolution backend for the base enlargement. On macOS, prefer the bundled UpScayl binary inside `/Applications/Upscayl.app`; do not require the GUI to be opened. Do not use a generative image model as the default upscaler: GPT Image 2 and Agnes Image 2.1 may redraw faces, products, logos, or text.
 
 ## Workflow
 
@@ -18,7 +18,7 @@ Use a dedicated super-resolution backend for the base enlargement. On macOS, pre
    - Add `GFPGAN` or `CodeFormer` only for portraits that need face restoration; keep face restoration conservative.
 4. Prefer 2x first. Apply a second stage only when the result still needs to reach 2K or 4K and the source has enough information.
 5. Validate output dimensions, file readability, visual artifacts, faces, edges, logos, and text. Report when details were reconstructed rather than recovered.
-6. Use Xiaobai 2k only as an optional second pass for requested local repairs, masking, background cleanup, or object retouching. Use Agnes only for requested style fusion or reference-image generation.
+6. Use GPT Image 2 only as an optional second pass for requested local repairs, masking, background cleanup, or object retouching. Use Agnes Image 2.1 only for requested style fusion or reference-image generation; it does not support mask editing.
 
 ## Backend Rules
 

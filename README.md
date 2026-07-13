@@ -2,7 +2,9 @@
 
 `local-image-upscale` 是一个面向 Codex / xiaow 的本地图片高清放大与修复 skill。
 
-它优先调用 macOS UpScayl 应用内置的 Real-ESRGAN CLI，不依赖即梦 API。基础放大与生成式改图分开处理：UpScayl 负责稳定的 2K/4K 高清放大，小白 2k 可选用于局部改图和 mask 修复，Agnes 仅用于参考图生成与风格融合，不支持改图。
+它优先调用 macOS UpScayl 应用内置的 Real-ESRGAN CLI，不依赖即梦 API。基础放大与生成式改图分开处理：UpScayl 负责稳定的 2K/4K 高清放大，GPT Image 2 可选用于局部改图和 mask 修复，Agnes Image 2.1 仅用于参考图生成与风格融合，不支持改图。
+
+文档使用上游模型名称，不使用“小白 2k”等内部渠道名称。Nano Banana 当前未接入本 skill，因此不将其写成已支持的后端。
 
 ## 功能
 
@@ -64,9 +66,9 @@ python3 ~/.codex/skills/local-image-upscale/scripts/check_backends.py
 | 需求 | 处理方式 |
 | --- | --- |
 | 稳定高清放大 | UpScayl / Real-ESRGAN |
-| 局部修复、mask 改图 | 小白 2k |
-| 参考图生图、风格融合 | Agnes |
-| Agnes 局部改图 | 不支持 |
+| 局部修复、mask 改图 | GPT Image 2 |
+| 参考图生图、风格融合 | Agnes Image 2.1 |
+| Agnes Image 2.1 局部改图 | 不支持 |
 
 严重模糊或尺寸过小的图片，模型只能重建可能的细节，不能保证恢复真实信息。文字、logo、二维码和 UI 截图应优先使用保守放大，并进行人工检查。
 
